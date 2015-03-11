@@ -11,3 +11,21 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+function src_optional {
+  if [[ -s "$1" ]]; then
+    source $1
+  fi
+}
+
+export EDITOR=vim
+export BUNDLE_EDITOR=$EDITOR
+
+export GIT_EDITOR=$EDITOR
+export GIT_COMMITTER_EMAIL='narciso.benigno@gmail.com'
+export GIT_AUTHOR_EMAIL='narciso.benigno@gmail.com'
+export TERM=xterm-256color
+export GREP_OPTIONS='--color=auto'
+
+export DOCKER_HOST='tcp://192.168.59.103:2375'
+
+src_optional "${ZDOTDIR:-$HOME}/.specific_confs.sh"
