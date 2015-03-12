@@ -31,3 +31,5 @@ export DOCKER_HOST='tcp://192.168.59.103:2375'
 alias h="cd ~/Documents/projects/$1"
 
 src_optional "${ZDOTDIR:-$HOME}/.specific_confs.sh"
+
+fpath=(/usr/local/share/zsh/site-functions/_pass $fpath)
