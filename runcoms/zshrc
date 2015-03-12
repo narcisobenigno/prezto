@@ -32,4 +32,5 @@ alias h="cd ~/Documents/projects/$1"
 
 src_optional "${ZDOTDIR:-$HOME}/.specific_confs.sh"
 
-fpath=(/usr/local/share/zsh/site-functions/_pass $fpath)
+bindkey "^R" history-incremental-search-backward
+bindkey "^F" history-incremental-search-forward
