@@ -38,3 +38,5 @@ src_optional "${ZDOTDIR:-$HOME}/.specific_confs.sh"
 
 bindkey "^R" history-incremental-search-backward
 bindkey "^F" history-incremental-search-forward
+
+export CDPATH="$CDPATH:.:$HOME/Documents/projects"
