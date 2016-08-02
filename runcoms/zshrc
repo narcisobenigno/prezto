@@ -25,11 +25,6 @@ export TERM=xterm-256color
 export GREP_OPTIONS='--color=auto'
 export HISTCONTROL='ignorespace'
 
-if [[ "$(docker-machine status dev)" == 'Running' ]]; then
-  eval "$(docker-machine env dev)"
-  export REDIS_HOST="$(docker-machine ip dev)"
-fi
-
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 
 alias h="cd ~/Documents/projects/$@"
