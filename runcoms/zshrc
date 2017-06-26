@@ -36,4 +36,9 @@ bindkey "^F" history-incremental-search-forward
 
 export CDPATH="$CDPATH:.:$HOME/Documents/projects"
 
-source /usr/local/opt/chruby/share/chruby/chruby.sh
+chruby_path='/usr/share/chruby/chruby.sh'
+if [[ `uname` == 'Darwin' ]]; then
+	chruby_path=/usr/local/opt/chruby/share/chruby/chruby.sh
+fi
+
+source $chruby_path
