@@ -22,7 +22,6 @@ export BUNDLE_EDITOR=$EDITOR
 
 export GIT_EDITOR=$EDITOR
 export TERM=xterm-256color
-export GREP_OPTIONS='--color=auto'
 export HISTCONTROL='ignorespace'
 
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
@@ -42,3 +41,7 @@ if [[ `uname` == 'Darwin' ]]; then
 fi
 
 source $chruby_path
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/narciso2b/.sdkman"
+[[ -s "/home/narciso2b/.sdkman/bin/sdkman-init.sh" ]] && source "/home/narciso2b/.sdkman/bin/sdkman-init.sh"
