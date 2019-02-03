@@ -20,6 +20,8 @@ function src_optional {
 export EDITOR=vim
 export BUNDLE_EDITOR=$EDITOR
 
+unset GREP_OPTIONS
+
 export GIT_EDITOR=$EDITOR
 export TERM=xterm-256color
 export HISTCONTROL='ignorespace'
